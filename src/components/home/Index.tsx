@@ -7,6 +7,7 @@ export const Index = () => {
         <div>
             <TopBar />
             <Section.Home />
+            <Section.About />
             {/* <Footer /> */}
         </div>
     )
