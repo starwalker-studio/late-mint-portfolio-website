@@ -1,5 +1,8 @@
 .overflow_hidden {
     overflow: hidden;
+    box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75);
 }
 
 .section_position {
@@ -201,5 +204,31 @@
         width: auto;
         height: 856px;
         // size: ;
+    }
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #63452c;
+    margin: 0;
+    text-align: center;
+    height: 54px;
+    color: #fff;
+
+    span {
+        margin-left: 9px;
+        margin-right: 9px;
+        font-size: 22px;
+    }
+    
+    h3 {
+        font-family: Oswald, Arial, sans-serif;
+        font-size: 24px;
+        letter-spacing: -.64px;
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 1.16667;
     }
 }

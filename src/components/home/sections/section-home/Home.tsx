@@ -1,6 +1,11 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMugHot } from '@fortawesome/free-solid-svg-icons';
 import style from './Home.module.scss';
 
 export const Home = () => {
+
+    const coffee = <FontAwesomeIcon icon={faMugHot} />
+
     return (
         <div className={style.overflow_hidden}>
             <section className={style.section_position}>
@@ -26,16 +31,21 @@ export const Home = () => {
                         <div className={style.content_right_side}>
                             <div className={style.inner_wrapper}>
                                 <div className={style.banner_item_left}>
-                                    <img src="/home-items/frappe-home-item-2.png" alt="" sizes="(max-width: 479px) 100vw, 458.765625px"/>
+                                    <img src="/home-items/frappe-home-item-2.png" alt="" sizes="(max-width: 479px) 100vw, 458.765625px" />
                                 </div>
                                 <div className={style.banner_item}>
-                                    <img src="/home-items/frappe-home-item-1.png" alt="" sizes="(max-width: 767px) 100vw, 482.125px"/>
+                                    <img src="/home-items/frappe-home-item-1.png" alt="" sizes="(max-width: 767px) 100vw, 482.125px" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <div className={style.banner}>
+                <span>{coffee}</span>
+                <h3>Disfruta un momento para ti, en un rincón donde el café sabe mejor</h3>
+                <span>{coffee}</span>
+            </div>
         </div>
     )
 }
