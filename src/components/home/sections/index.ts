@@ -1,0 +1,1 @@
+export { Home } from "./section-home/Home";

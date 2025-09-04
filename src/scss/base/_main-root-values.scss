@@ -1,5 +1,7 @@
 @use 'main-constants' as const;
 
 :root {
-    
+    --main-grey-color: #{const.$main-grey-color};
+    --main-font-family: #{const.$main-font-family};
+    --main-body-font-size: #{const.$main-body-font-size};
 }

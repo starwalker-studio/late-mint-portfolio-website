@@ -1,12 +1,13 @@
 import { TopBar } from "../../main/layouts/TopBar/TopBar";
 import { Footer } from "../../main/layouts/Footer/Footer";
+import * as Section from "./sections";
 
 export const Index = () => {
     return (
         <div>
             <TopBar />
-            <h2>Home Page</h2>
-            <Footer />
+            <Section.Home />
+            {/* <Footer /> */}
         </div>
     )
 }
