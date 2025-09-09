@@ -1,8 +1,8 @@
 .overflow_hidden {
     overflow: hidden;
-    box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 5px 26px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.75);
 }
 
 .section_position {
@@ -222,7 +222,7 @@
         margin-right: 9px;
         font-size: 22px;
     }
-    
+
     h3 {
         font-family: Oswald, Arial, sans-serif;
         font-size: 24px;
