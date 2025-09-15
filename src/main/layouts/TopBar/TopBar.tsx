@@ -1,3 +1,5 @@
+import { useScrollDown } from '../../../hooks/useScrollDown';
+import { motion } from 'framer-motion';
 import style from './TopBar.module.scss';
 
 type TopBarProps = {
@@ -5,9 +7,17 @@ type TopBarProps = {
 }
 
 export const TopBar = ({ onNavigate }: TopBarProps) => {
+
+  const { scrolled, hidden, navbarEffects, navbarTransition } = useScrollDown();
+
   return (
     <>
-      <nav className={style.navbar}>
+      <motion.nav
+        className={`${style.navbar} ${scrolled && style.navbar_scrolled} ${hidden && style.navbar_hidden}`}
+        initial="initial"
+        animate={hidden ? "hidden" : "visible"}
+        variants={navbarEffects}
+        transition={navbarTransition}>
         <div className={style.nav_container}>
           <div className={style.nav_wrapper}>
             <a href="/" className={style.a_nav_logo}>
@@ -26,7 +36,7 @@ export const TopBar = ({ onNavigate }: TopBarProps) => {
             </div>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </>
   )
 }
