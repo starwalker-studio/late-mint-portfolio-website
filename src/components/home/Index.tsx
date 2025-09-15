@@ -7,8 +7,10 @@ export const Index = () => {
         <div>
             <TopBar />
             <Section.Home />
+            <Section.WPlace />
             <Section.About />
             <Section.Menu />
+            <Section.Testimonials />
             {/* <Footer /> */}
         </div>
     )
