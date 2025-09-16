@@ -1,3 +1,5 @@
+@use '/src/scss/styles' as *;
+
 .about_section {
     padding-top: 100px;
     padding-bottom: 120px;
@@ -25,13 +27,7 @@
     padding-right: 100px;
 
     h1 {
-        color: #082e5e;
-        font-family: Oswald, Arial, sans-serif;
-        font-size: 60px;
-        letter-spacing: -.64px;
-        text-transform: uppercase;
-        font-weight: 500;
-        line-height: 1.16667;
+        @include h1-style;
     }
 }
 

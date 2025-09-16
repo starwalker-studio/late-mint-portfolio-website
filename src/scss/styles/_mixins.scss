@@ -1,0 +1,62 @@
+@forward '../base/';
+
+@mixin h1-style {
+    color: var(--main-blue-color);
+    font-family: var(--main-font-family-header);
+    font-size: 60px;
+    letter-spacing: -.64px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.16667;
+}
+
+@mixin h2-style {
+    color: var(--main-blue-color);
+    font-family: var(--main-font-family-header);
+    font-size: 40px;
+    letter-spacing: -.48px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 2px;
+}
+
+@mixin h3-style {
+    font-family: var(--main-font-family-header);
+    font-size: 24px;
+    letter-spacing: -.64px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.16667;
+}
+
+@mixin button-yellow-style {
+    background-color: var(--main-yellow-color);
+    border: 1px solid var(--main-yellow-color);
+    border-radius: 100px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    // font-size: 15px;
+    font-weight: 600;
+    letter-spacing: inherit;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 15px 30px;
+    text-align: center;
+    color: var(--main-blue-color);
+    transition: all .4s ease;
+    white-space: nowrap;
+}
+
+@mixin img-home-style {
+    object-fit: cover;
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+    border: 0;
+    width: auto;
+    height: 856px;
+}

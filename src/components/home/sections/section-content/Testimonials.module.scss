@@ -1,3 +1,5 @@
+@use '/src/scss/styles' as *;
+
 section {
     display: block;
 }
@@ -38,14 +40,7 @@ section {
     display: flex;
 
     h2 {
-        color: #082e5e;
-        font-family: Oswald, Arial, sans-serif;
-        font-size: 40px;
-        letter-spacing: -.48px;
-        text-transform: uppercase;
-        font-weight: 500;
-        line-height: 1.25;
-        margin-bottom: 2px;
+        @include h2-style;
     }
 }
 
