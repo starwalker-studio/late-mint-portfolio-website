@@ -1,16 +1,16 @@
-import { TopBar } from "../../main/layouts/TopBar/TopBar";
+import { Header } from "../../main/layouts/TopBar/Header";
 import { Footer } from "../../main/layouts/Footer/Footer";
 import * as Section from "./sections";
 
 export const Index = () => {
     return (
         <div>
-            <TopBar />
+            <Header />
             <Section.Home />
-            <Section.WPlace />
+            {/* <Section.WPlace />
             <Section.About />
             <Section.Menu />
-            <Section.Testimonials />
+            <Section.Testimonials /> */}
             {/* <Footer /> */}
         </div>
     )

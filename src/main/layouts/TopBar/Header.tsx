@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { motion } from 'framer-motion';
 import { useMobileScreen } from '../../../hooks/useMobileScreen';
-import style from './TopBar.module.scss';
+import style from './Header.module.scss';
 
 type TopBarProps = {
   onNavigate: (section: 'about' | 'menu' | 'services' | 'stories') => void;
 }
 
-export const TopBar = ({ onNavigate }: TopBarProps) => {
+export const Header = ({ onNavigate }: TopBarProps) => {
 
   const { isMobileScreen, handleClick, nav_transition } = useMobileScreen();
   const { scrolled, hidden, navbarEffects, navbarTransition } = useScrollDown();

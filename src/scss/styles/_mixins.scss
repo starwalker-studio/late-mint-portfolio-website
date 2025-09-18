@@ -3,7 +3,7 @@
 @mixin h1-style {
     color: var(--main-blue-color);
     font-family: var(--main-font-family-header);
-    font-size: 60px;
+    // font-size: 60px;
     letter-spacing: -.64px;
     text-transform: uppercase;
     font-weight: 500;
@@ -23,7 +23,7 @@
 
 @mixin h3-style {
     font-family: var(--main-font-family-header);
-    font-size: 24px;
+    // font-size: 24px;
     letter-spacing: -.64px;
     text-transform: uppercase;
     font-weight: 500;
@@ -56,7 +56,31 @@
     vertical-align: middle;
     max-width: 100%;
     display: inline-block;
-    border: 0;
-    width: auto;
-    height: 856px;
+    border: 0;    
+}
+
+@mixin button-navbar-mobile {
+    background: transparent;
+    border: 2px solid;
+    border-top-color: currentcolor;
+    border-right-color: currentcolor;
+    border-bottom-color: currentcolor;
+    border-left-color: currentcolor;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: inherit;
+    letter-spacing: 1.5px;
+    line-height: 1;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    transition: all .4s ease;
+    white-space: nowrap;
 }

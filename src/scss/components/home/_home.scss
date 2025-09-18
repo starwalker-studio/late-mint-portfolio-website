@@ -1,0 +1,23 @@
+@use '../../utils/' as *;
+
+:root {
+    --content_left_side-max-width: 581px;
+    --h1-font-size: 60px;
+    --item-left-display: flex;
+    --item-height: 856px;
+    --transform-item: none;
+    --text-wrap-font-size: 25px;
+    --h3-font-size: 24px;
+}
+
+@include xl {
+    :root {
+        --h1-font-size: 4.3ex;
+        --content_left_side-max-width: 208px;
+        --item-left-display: none;
+        --item-height: 685px;
+        --transform-item: translate(90px, 70px)scale(.69);
+        --text-wrap-font-size: 14px;
+        --h3-font-size: 18px;
+    }
+}

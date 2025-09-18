@@ -1,60 +1,18 @@
 @use '/src/scss/styles' as *;
-
-.navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    background-color: transparent;
-    transition: background-color 0.4s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(0px);
-}
+@forward '/src/scss/layout/header/';
+@forward '/src/scss/base/';
 
 .nav_mobile {
-    background: rgba(221, 219, 218, 0.623);
+    background: var(--navbar-background);
 }
 
 .navbar_scrolled {
-  background: rgba(221, 219, 218, 0.623);
+  background: var(--navbar-background);
   backdrop-filter: blur(10px);
 }
 
 .navbar_hidden {
   transform: translateY(-100%);
-}
-
-.nav_container {
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.a_nav_logo {
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: #333;
-
-    a {
-        text-decoration: none;
-    }
-
-    img {
-        vertical-align: middle;
-        max-width: 100%;
-        display: inline-block;
-        width: 156px;
-        height: 60px;
-    }
-}
-
-.nav_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .nav_menu {
@@ -108,29 +66,7 @@
     width: 350px;
 
     button {
-        background: transparent;
-        border: 2px solid;
-        border-top-color: currentcolor;
-        border-right-color: currentcolor;
-        border-bottom-color: currentcolor;
-        border-left-color: currentcolor;
-        color: inherit;
-        cursor: pointer;
-        display: inline-block;
-        font-family: inherit;
-        font-size: 12px;
-        letter-spacing: inherit;
-        letter-spacing: 1.5px;
-        line-height: 1;
-        max-width: 100%;
-        overflow: hidden;
-        padding: 15px 30px;
-        text-align: center;
-        text-decoration: none;
-        text-overflow: ellipsis;
-        text-transform: uppercase;
-        transition: all .4s ease;
-        white-space: nowrap;
+        @include button-navbar-mobile;
 
         &:hover {
             background-color: #000000d6;

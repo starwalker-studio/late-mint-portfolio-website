@@ -1,4 +1,5 @@
 @use '/src/scss/styles' as *;
+@forward '/src/scss/components/home';
 
 .overflow_hidden {
     overflow: hidden;
@@ -58,7 +59,7 @@
 
 .content_left_side {
     flex: none;
-    max-width: 581px;
+    max-width: var(--content_left_side-max-width);
     padding-bottom: 220px;
 }
 
@@ -76,6 +77,7 @@
 
     h1 {
         @include h1-style;
+        font-size: var(--h1-font-size);
     }
 }
 
@@ -98,7 +100,7 @@
     position: relative;
 
     p {
-        font-size: 20px;
+        font-size: var(--text-wrap-font-size);
         font-weight: 500;
     }
 }
@@ -152,12 +154,15 @@
 }
 
 .banner_item {
+    transform: var(--transform-item);
     margin-left: 0;
     z-index: 99;
     position: relative;
 
-    img {        
+    img {
         @include img-home-style;
+        width: auto;
+        height: var(--item-height);
     }
 }
 
@@ -169,6 +174,9 @@
 
     img {
         @include img-home-style;
+        display: var(--item-left-display);
+        width: auto;
+        height: 856px;
     }
 }
 
@@ -190,5 +198,6 @@
 
     h3 {
         @include h3-style;
+        font-size: var(--h3-font-size);
     }
 }
