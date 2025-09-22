@@ -6,7 +6,7 @@ import { useMobileScreen } from '../../../hooks/useMobileScreen';
 import style from './Header.module.scss';
 
 type TopBarProps = {
-  onNavigate: (section: 'about' | 'menu' | 'services' | 'stories') => void;
+  onNavigate: (section: 'home' | 'about' | 'menu' | 'services') => void;
 }
 
 export const Header = ({ onNavigate }: TopBarProps) => {
@@ -25,9 +25,9 @@ export const Header = ({ onNavigate }: TopBarProps) => {
         transition={navbarTransition}>
         <div className={style.nav_container}>
           <div className={style.nav_wrapper}>
-            <a href="/" className={style.a_nav_logo}>
-              <img src="/logo/late-mint-logo.svg" alt="logo" />
-            </a>
+            <div className={style.a_nav_logo}>
+              <img src="/logo/late-mint-logo.svg" alt="logo" onClick={() => onNavigate('home')}/>
+            </div>
             {
               isMobileScreen() ?
                 <>
@@ -40,9 +40,8 @@ export const Header = ({ onNavigate }: TopBarProps) => {
                   <nav className={style.nav_menu}>
                     <ul>
                       <li onClick={() => onNavigate('about')}>Nosotros</li>
-                      <li onClick={() => onNavigate('menu')}>Menu</li>
+                      <li onClick={() => onNavigate('menu')}>Menú</li>
                       <li onClick={() => onNavigate('services')}>Servicios</li>
-                      <li onClick={() => onNavigate('stories')}>Testimonios</li>
                     </ul>
                   </nav>
                   <div className={style.button_wrapper}>
@@ -66,19 +65,16 @@ export const Header = ({ onNavigate }: TopBarProps) => {
                     handleClick()
                   }}><span><p>Nosotros</p></span></li>
                   <li onClick={() => {
+                    onNavigate('menu')
                     handleClick()
-                  }}><span><p>Propiedades</p></span></li>
+                  }}><span><p>Menú</p></span></li>
                   <li onClick={() => {
                     onNavigate('services')
                     handleClick()
                   }}><span><p>Servicios</p></span></li>
-                  <li onClick={() => {
-                    onNavigate('stories')
-                    handleClick()
-                  }}><span><p>Testimonios</p></span></li>
                 </ul>
                 <div className={style.button_wrapper_mobile}>
-                  <button>Contacto</button>
+                  <button onClick={() => handleClick()}>Cerrar Menú</button>
                 </div>
               </div>
             </div>

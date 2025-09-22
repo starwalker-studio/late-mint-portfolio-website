@@ -1,8 +1,9 @@
+import { forwardRef } from 'react';
 import style from './Menu.module.scss';
 
-export const Menu = () => {
+export const Menu = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <section className={style.menu_section}>
+        <section ref={ref} className={style.menu_section}>
             <div className={style.menu_layout}>
                 <div className={style.menu_content}>
                     <div className={style.menu_content_heading}>
@@ -125,4 +126,4 @@ export const Menu = () => {
             </div>
         </section>
     )
-}
+})

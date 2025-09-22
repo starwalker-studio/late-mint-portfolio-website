@@ -1,8 +1,9 @@
+import { forwardRef } from 'react';
 import style from './WPlace.module.scss';
 
-export const WPlace = () => {
+export const WPlace = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <section className={style.welcome_section}>
+        <section ref={ref} className={style.welcome_section}>
             <div className={style.welcome_container}>
                 <div className={style.content_wrapper}>
                     <div className={style.welcome_place}>
@@ -27,4 +28,4 @@ export const WPlace = () => {
             </div>
         </section>
     )
-}
+})

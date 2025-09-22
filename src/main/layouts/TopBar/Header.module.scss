@@ -101,17 +101,18 @@
 .nav_mobile {
     display: flex;
     width: 100%;
-    margin-top: 3.75rem;
-    padding-bottom: 10rem;
+    // padding-bottom: 10rem;
     position: fixed;
     inset: 0%;
     top: 0%;
     right: 0%;
+    bottom: 0%;
     overflow: scroll;
-    background-color: #fff;
-    height: calc(100vh - 52px) !important;
-    z-index: 1;
-    top: 0;
+    background-color: var(--navbar-background);
+    backdrop-filter: blur(10px);
+    height: 200%;
+    // z-index: 1;
+    // top: 0;
     right: auto;
     flex-flow: column;
     flex: none;

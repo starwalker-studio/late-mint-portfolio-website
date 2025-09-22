@@ -1,0 +1,63 @@
+@use '/src/scss/styles' as *;
+@use '/src/scss/utils/' as *;
+
+.menu_section {
+    background-color: #f6f1e8;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.menu_layout {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1280px;
+    position: relative;
+}
+
+.menu_content {
+    grid-column-gap: 64px;
+    grid-row-gap: 64px;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.menu_content_heading {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    text-align: center;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    display: flex;
+
+    h2 {
+        @include h2-style;
+    }
+
+    p {
+        margin-top: 2px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+:root {
+    --menu-list-display: grid;
+    --menu-list-flex-direction: none;
+}
+
+@include mobile {
+    :root {
+        --menu-list-display: flex;
+        --menu-list-flex-direction: column;        
+    }
+}
