@@ -1,20 +1,6 @@
+@use '/src/scss/base/main-constants' as const;
 @use '/src/scss/styles' as *;
 @forward '/src/scss/components/home';
-
-.overflow_hidden {
-    overflow: hidden;
-    box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 5px 26px 1px rgba(0, 0, 0, 0.75);
-}
-
-.section_position {
-    z-index: 99;
-    background-image: none;
-    background-size: auto;
-    padding-top: 100px;
-    position: relative;
-}
 
 .layout_flex {
     z-index: -1;
@@ -28,13 +14,13 @@
 }
 
 .banner_left {
-    background-color: #f6f1e8;
+    background-color: const.$color-cream;
     flex: 0 70%;
     height: 100%;
 }
 
 .banner_right {
-    background-color: #082e5e;
+    background-color: const.$color-blue;
     flex: 0 40%;
     height: 100%;
 }
@@ -81,20 +67,6 @@
     }
 }
 
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0px, 200px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-        transform-style: preserve-3d;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-        transform-style: preserve-3d;
-    }
-}
-
 .text_wrap {
     padding-bottom: 41px;
     position: relative;
@@ -114,8 +86,8 @@
         @include button-yellow-style;
 
         &:hover {
-            background-color: #082e5e;
-            border: 1px solid #082e5e;
+            background-color: const.$color-blue;
+            border: 1px solid const.$color-blue;
             color: #fff;
         }
     }
@@ -139,20 +111,6 @@
     display: flex;
 }
 
-@keyframes zoomItems {
-    0% {
-        opacity: 0;
-        transform: translate3d(0px, 0px, 0px) scale3d(0.4, 0.4, 0.4);
-        transform-style: preserve-3d;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
-        transform-style: preserve-3d;
-    }
-}
-
 .banner_item {
     transform: var(--transform-item);
     margin-left: 0;
@@ -168,7 +126,7 @@
 
 .banner_item_left {
     display: block;
-    transform: translate(-10px, 30px)scale(.69)rotate(-10deg);
+    transform: var(--item-left-transform);
     margin-right: -250px;
     position: relative;
 
@@ -184,7 +142,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #63452c;
+    background-color: const.$color-coffee;
     margin: 0;
     text-align: center;
     height: 54px;

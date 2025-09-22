@@ -1,0 +1,39 @@
+@use '../../utils/' as *;
+
+.about_section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.about_container {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1280px;
+    position: relative;
+}
+
+:root {
+    --about-grid-flex-direction: none;
+    --about-grid-padding-right: 100px;
+    --about-grid-img-height: 640px;
+}
+
+@include mobile {
+    :root {
+        --about-grid-flex-direction: column;        
+        --about-grid-padding-right: 0;
+        --about-grid-img-height: 340px;
+    }
+}
+
+@include tablet {
+    :root {
+        --about-grid-img-height: 440px;
+    }
+}

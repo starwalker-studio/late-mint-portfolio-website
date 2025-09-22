@@ -1,29 +1,5 @@
 @use '/src/scss/styles' as *;
-
-.welcome_section {
-    padding-top: 120px;
-}
-
-.welcome_container {
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 1280px;
-    position: relative;
-}
-
-.content_wrapper {
-    display: flex;
-    flex-direction: row;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    align-items: stretch;
-}
+@forward '/src/scss/components/wplace/';
 
 .welcome_place {
     max-width: 630px;
@@ -38,7 +14,7 @@
 
     h2 {
         @include h2-style;
-        font-size: 35px;
+        font-size: var(--h2-font-size);
     }
 }
 
@@ -57,6 +33,7 @@
 .welcome_text {
     padding-top: 54px;
     max-width: 570px;
+    font-size: var(--welcome-font-size);
 
     p {
         margin-top: 0;

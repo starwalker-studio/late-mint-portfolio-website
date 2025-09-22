@@ -1,30 +1,14 @@
 @use '/src/scss/styles' as *;
-
-.about_section {
-    padding-top: 100px;
-    padding-bottom: 120px;
-}
-
-.about_container {
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 1280px;
-    position: relative;
-}
+@forward '/src/scss/components/about/';
 
 .about_grid {
     display: flex;
+    flex-direction: var(--about-grid-flex-direction);
     align-items: center;
 }
 
 .about_grid_info {
-    padding-right: 100px;
+    padding-right: var(--about-grid-padding-right);
 
     h1 {
         @include h1-style;
@@ -50,7 +34,7 @@
 
     img {
         width: 850px;
-        height: 640px;
+        height: var(--about-grid-img-height);
         object-fit: cover;
     }
 }

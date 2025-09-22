@@ -1,0 +1,40 @@
+@use '../../utils/' as *;
+
+.welcome_section {
+    padding-top: 120px;
+}
+
+.welcome_container {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1280px;
+    position: relative;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: var(--conent-wrapper-flex-direction);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    align-items: stretch;
+}
+
+:root {
+    --h2-font-size: 35px;
+    --welcome-font-size: inherit;
+    --conent-wrapper-flex-direction: row;
+}
+
+@include mobile {
+    :root {
+        --h2-font-size: 32px;
+        --welcome-font-size: 18px;
+        --conent-wrapper-flex-direction: column;
+    }
+}

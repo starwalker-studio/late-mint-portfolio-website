@@ -7,11 +7,11 @@ export const Index = () => {
         <div>
             <Header />
             <Section.Home />
-            {/* <Section.WPlace />
+            <Section.WPlace />
             <Section.About />
             <Section.Menu />
-            <Section.Testimonials /> */}
-            {/* <Footer /> */}
+            {/* <Section.Testimonials />
+            <Footer /> */}
         </div>
     )
 }
