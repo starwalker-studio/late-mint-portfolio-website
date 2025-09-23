@@ -6,7 +6,7 @@ import { useMobileScreen } from '../../../hooks/useMobileScreen';
 import style from './Header.module.scss';
 
 type TopBarProps = {
-  onNavigate: (section: 'home' | 'about' | 'menu' | 'services') => void;
+  onNavigate: (section: 'home' | 'about' | 'menu' | 'testimonials') => void;
 }
 
 export const Header = ({ onNavigate }: TopBarProps) => {
@@ -41,7 +41,7 @@ export const Header = ({ onNavigate }: TopBarProps) => {
                     <ul>
                       <li onClick={() => onNavigate('about')}>Nosotros</li>
                       <li onClick={() => onNavigate('menu')}>Menú</li>
-                      <li onClick={() => onNavigate('services')}>Servicios</li>
+                      <li onClick={() => onNavigate('testimonials')}>Opiniones</li>
                     </ul>
                   </nav>
                   <div className={style.button_wrapper}>
@@ -69,9 +69,9 @@ export const Header = ({ onNavigate }: TopBarProps) => {
                     handleClick()
                   }}><span><p>Menú</p></span></li>
                   <li onClick={() => {
-                    onNavigate('services')
+                    onNavigate('testimonials')
                     handleClick()
-                  }}><span><p>Servicios</p></span></li>
+                  }}><span><p>Opiniones</p></span></li>
                 </ul>
                 <div className={style.button_wrapper_mobile}>
                   <button onClick={() => handleClick()}>Cerrar Menú</button>

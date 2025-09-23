@@ -8,14 +8,14 @@ export const Index = () => {
     const homeRef = useRef<HTMLDivElement>(null);
     const aboutRef = useRef<HTMLDivElement>(null);
     const menuRef = useRef<HTMLDivElement>(null);
-    const servicesRef = useRef<HTMLDivElement>(null);
+    const testimonialsRef = useRef<HTMLDivElement>(null);
 
-    const handleNavigate = (section: 'home' | 'about' | 'menu' | 'services') => {
+    const handleNavigate = (section: 'home' | 'about' | 'menu' | 'testimonials') => {
         const map = {
             home: homeRef,
             about: aboutRef,
             menu: menuRef,
-            services: servicesRef
+            testimonials: testimonialsRef
         };
 
         map[section].current?.scrollIntoView({ behavior: 'smooth' });
@@ -25,13 +25,13 @@ export const Index = () => {
         <>
             <Header onNavigate={handleNavigate} />
             <div ref={homeRef}>
-                <Section.Home />
+                <Section.Home onNavigate={handleNavigate} />
                 <Section.WPlace ref={aboutRef} />
                 <Section.About />
                 <Section.Menu ref={menuRef} />
+                <Section.Testimonials ref={testimonialsRef}/>
             </div>
-            {/* <Section.Testimonials />
-            <Footer /> */}
+            <Footer />
         </>
     )
 }

@@ -1,8 +1,9 @@
+import { forwardRef } from 'react';
 import style from './Testimonials.module.scss';
 
-export const Testimonials = () => {
+export const Testimonials = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <section>
+        <section ref={ref}>
             <div className={style.section_container}>
                 <div className={style.section_content}>
                     <div className={style.section_heading}>
@@ -47,4 +48,4 @@ export const Testimonials = () => {
             </div>
         </section>
     )
-}
+})

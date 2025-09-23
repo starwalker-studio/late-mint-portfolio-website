@@ -2,7 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMugHot } from '@fortawesome/free-solid-svg-icons';
 import style from './Home.module.scss';
 
-export const Home = () => {
+type HomeProps = {
+    onNavigate: (section: 'menu') => void;
+}
+
+export const Home = ({ onNavigate }: HomeProps) => {
 
     const coffee = <FontAwesomeIcon icon={faMugHot} />
 
@@ -24,7 +28,7 @@ export const Home = () => {
                                     <p>Café de especialidad, sabores naturales y un espacio hecho para disfrutar sin prisa.</p>
                                 </div>
                                 <div className={style.button_header}>
-                                    <button>Ver Menu</button>
+                                    <button onClick={() => onNavigate('menu')}>Ver Menu</button>
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,48 @@
+@use '/src/scss/utils/' as *;
+
+section {
+    display: block;
+}
+
+.section_container {
+    z-index: 2;
+    flex-flow: column;
+    flex: 1;
+    width: 100%;
+    max-width: 1280px;
+    padding-top: 80px;
+    padding-bottom: var(--section-container-margin-bottom);
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section_content {
+    grid-column-gap: 64px;
+    grid-row-gap: 64px;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+:root {
+    --section-container-margin-bottom: 80px;
+    --testimonial-grid-display: grid;
+    --testimonial-grid-flex-direction: none;
+    --testimonial-column-display: flex;
+    --testimonial-column-margin-bottom: 0;
+}
+
+@include mobile {
+    :root {
+        --section-container-margin-bottom: 280px;
+        --testimonial-grid-display: flex;
+        --testimonial-grid-flex-direction: column;
+        --testimonial-column-display: inherit;
+        --testimonial-column-margin-bottom: 2ex;
+    }
+}
