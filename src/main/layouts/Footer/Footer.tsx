@@ -11,7 +11,7 @@ export const Footer = () => {
               <p>Este sitio es solo para fines demostrativos. <br />
                 Late Mint es un proyecto ficticio desarrollado como parte de un portafolio creativo. <br />
                 Sitio demo para cafetería/restaurante con enfoque en negocio minimalista.</p>
-                <p>2025</p>
+                <p>Copyright 2026 © Disenmix</p>
             </div>
           </div>
         </div>
